@@ -12,8 +12,8 @@ package lineas_de_espera;
 public class MM1 extends Sistema{
 
     //Constructores
-    public MM1(double lambda,double miu){
-        super(lambda, miu);
+    public MM1(double lambda,double miu,int servidores){
+        super(lambda, miu,servidores);
     }
     public MM1(double lambda, double miu, int servidores, int poblacion, int capacidad_fila, int capacidad_sistema) {
         super(lambda, miu, servidores, poblacion, capacidad_fila, capacidad_sistema);
@@ -40,7 +40,8 @@ public class MM1 extends Sistema{
 
     @Override
     public double po() {
-        return 1- this.ro;
+        
+        return 1-this.ro;
     }
 
     @Override

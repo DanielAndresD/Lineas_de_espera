@@ -19,7 +19,7 @@ public class Lineas_de_espera {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         //MM1 SistemaObj = new MM1(3,5,1,1,2,2);
-        MM1 SistemaObj = new MM1(3,5);
+        MMS SistemaObj = new MMS(3,5,1);
         System.out.println("M:(λ="+SistemaObj.lambda+")/"+"M:(μ="+SistemaObj.miu+")/"+
                 SistemaObj.servidores+"/"+((int)SistemaObj.poblacion)+"/"+((int)SistemaObj.capacidad_sistema)+"/FIFO");
         System.out.println("Ro:  "+SistemaObj.ro);
@@ -31,8 +31,8 @@ public class Lineas_de_espera {
         System.out.println("Wq="+SistemaObj.Wq());
         //System.out.println("¿Desea calcular Pk?");
         //int n=sc.nextInt();
-        int n=0;
-        System.out.println("P(k="+n+")= "+SistemaObj.pk(0));
+        int n=2;
+        System.out.println("P(k="+n+")= "+SistemaObj.pk(n));
 
     }
     

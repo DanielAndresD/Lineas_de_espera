@@ -25,9 +25,10 @@ public abstract class Sistema {
     public int servidores=1;
 
 
-    public Sistema(double lambda,double miu){
+    public Sistema(double lambda,double miu,int servidores){
         this.lambda=lambda;
         this.miu=miu; 
+        this.servidores=servidores;
         this.ro=this.lambda/(this.miu*this.servidores);
     }
     public Sistema(double lambda,double miu,int servidores,double poblacion,double capacidad_fila,double capacidad_sistema){
