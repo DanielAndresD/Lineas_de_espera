@@ -18,10 +18,11 @@ public class Lineas_de_espera {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        MM1 SistemaObj = new MM1(9,5,2,1,2,2);
-        System.out.println("M:"+SistemaObj.lambda+"/"+"M:"+SistemaObj.miu+"/"+
+        //MM1 SistemaObj = new MM1(3,5,1,1,2,2);
+        MM1 SistemaObj = new MM1(3,5);
+        System.out.println("M:(λ="+SistemaObj.lambda+")/"+"M:(μ="+SistemaObj.miu+")/"+
                 SistemaObj.servidores+"/"+((int)SistemaObj.poblacion)+"/"+((int)SistemaObj.capacidad_sistema)+"/FIFO");
-        System.out.println("Ro: "+SistemaObj.Ro(SistemaObj.lambda,SistemaObj.miu,SistemaObj.servidores));
+        System.out.println("Ro:  "+SistemaObj.ro);
         System.out.println("Medidas de desempeño");
         System.out.println("Po="+SistemaObj.po());
         System.out.println("Ls="+SistemaObj.Ls());

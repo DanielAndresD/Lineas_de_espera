@@ -18,6 +18,7 @@ public abstract class Sistema {
     public double 
         lambda,
         miu,
+        ro,
         poblacion=Double.POSITIVE_INFINITY,
         capacidad_fila=Double.POSITIVE_INFINITY,
         capacidad_sistema=Double.POSITIVE_INFINITY;
@@ -26,7 +27,8 @@ public abstract class Sistema {
 
     public Sistema(double lambda,double miu){
         this.lambda=lambda;
-        this.miu=miu;    
+        this.miu=miu; 
+        this.ro=this.lambda/(this.miu*this.servidores);
     }
     public Sistema(double lambda,double miu,int servidores,double poblacion,double capacidad_fila,double capacidad_sistema){
         this.lambda=lambda;
@@ -35,6 +37,7 @@ public abstract class Sistema {
         this.poblacion=poblacion;
         this.capacidad_fila=capacidad_fila;
         this.capacidad_sistema=capacidad_sistema;
+        this.ro=this.lambda/(this.miu*this.servidores);
 
     }
     //metodos
@@ -47,17 +50,8 @@ public abstract class Sistema {
     Wq Tiempo de duración en la fila
     */
 
-    /**
-     *
-     * @param lambda
-     * @param miu
-     * @param servidores
-     * @return 
-     */
 
-    public  double Ro(double lambda, double miu,int servidores){
-        return lambda/(miu*servidores);
-    }
+
     public abstract double Ls();
     public abstract double Lq();
     public abstract double Ws();

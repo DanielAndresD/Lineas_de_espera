@@ -40,12 +40,12 @@ public class MM1 extends Sistema{
 
     @Override
     public double po() {
-        return 1- Ro(lambda,miu,servidores);
+        return 1- this.ro;
     }
 
     @Override
     public double pk(int n) {
-        return po()*Math.pow(Ro(lambda,miu,servidores),n);
+        return po()*Math.pow(this.ro,n);
     }
     
 }
