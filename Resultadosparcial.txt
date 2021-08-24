@@ -1,0 +1,30 @@
+run:
+Punto 1, Vehiculos y mecánicos
+Datos del sistema:
+	 M:2.0/M:125.0/1/20.0/2.0
+	 Tiempo entre arrivos(λ):2.0 cl/ut
+	 Tiempo de servicio(μ):125.0 cl/ut
+	 Número de servidores(s):1 cl/ut
+	 Factor de utilización del sistema(ρ):0.016 cl/ut
+
+Medidas de desempeño: 
+	Po=0.984
+	Ls=0.016260162601626018
+	Lq=2.6016260162601624E-4
+	Ws=0.008130081300813009
+	Wq=1.3008130081300812E-4
+Punto 2, Cajeros
+Datos del sistema:
+	 M:30.0/M:15.0/3/Infinity/Infinity
+	 Tiempo entre arrivos(λ):30.0 cl/ut
+	 Tiempo de servicio(μ):15.0 cl/ut
+	 Número de servidores(s):3 cl/ut
+	 Factor de utilización del sistema(ρ):0.6666666666666666 cl/ut
+
+Medidas de desempeño: 
+	Po=0.49090909090909096
+	Ls=2.1454545454545455
+	Lq=0.14545454545454545
+	Ws=0.07151515151515152
+	Wq=0.0048484848484848485
+BUILD SUCCESSFUL (total time: 7 seconds)
