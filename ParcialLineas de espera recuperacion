@@ -1,0 +1,48 @@
+//Modificaciones para crear un objeto de sistema MM1 y MM3
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lineas_de_espera;
+
+/**
+ *
+ * @author daniel davila
+ */
+import java.util.Scanner;
+public class Lineas_de_espera {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void Medidas_de_desempeño(Sistema sistema){
+        //System.out.println("Ro:  "+sistema.ro);
+        System.out.println("Medidas de desempeño: ");
+        System.out.println("\tPo="+sistema.po());
+        System.out.println("\tLs="+sistema.Ls());
+        System.out.println("\tLq="+sistema.Lq());
+        System.out.println("\tWs="+sistema.Ws());
+        System.out.println("\tWq="+sistema.Wq());
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        MM1 SistemaP1 = new MM1(2,125,1,20,3,2);
+        MMS SistemaP2 = new MMS(30,15,3);
+        System.out.println("Punto 1, Vehiculos y mecánicos");
+        System.out.println(SistemaP1.toString());
+        Medidas_de_desempeño(SistemaP1);
+        
+        System.out.println("Punto 2, Cajeros");
+        System.out.println(SistemaP2.toString());
+        Medidas_de_desempeño(SistemaP2);
+        //System.out.println("¿Desea calcular Pk?");
+        //int n=sc.nextInt();
+        //int n=4;
+        //System.out.println(SistemaObj.pk(n));
+
+    }
+    
+}
